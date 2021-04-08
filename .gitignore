@@ -2,3 +2,4 @@ venv
 .idea
 args.txt
 points.csv
+__pycache__
