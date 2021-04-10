@@ -26,6 +26,7 @@ from PyQt5.QtWidgets import QApplication
 from PyQt5.QtWidgets import QMainWindow
 from PyQt5.QtWidgets import QPushButton
 from PyQt5.QtWidgets import QWidget
+from PyQt5.QtWidgets import QLabel
 
 tbThread = 0
 
@@ -62,14 +63,20 @@ class T35GUI(QMainWindow):
         self.setFixedSize(250, 250)
         self._centralWidget = QWidget(self)
         self.setCentralWidget(self._centralWidget)
+        self._create_labels()
         self._create_buttons()
+
+    def _create_labels(self):
+        self.labels = {
+            "viewers": QLabel()
+        }
 
     def _create_buttons(self):
         self.buttons = {
             "exit": QPushButton("Exit")
         }
         self.buttons["exit"].setFixedSize(100, 40)
-        self.buttons["exit"].move(75, 105)
+        self.buttons["exit"].move(0, 105)
         self.buttons["exit"].setParent(self)
         self.buttons["exit"].clicked.connect(btn_exit)
 
