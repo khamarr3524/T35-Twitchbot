@@ -3,3 +3,5 @@ venv
 args.txt
 points.csv
 __pycache__
+.json
+*.json

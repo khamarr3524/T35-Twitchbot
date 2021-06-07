@@ -87,6 +87,7 @@ def main():
     f = open('args.txt', 'r')
     for line in f:
         args.append(line.rstrip())
+    f.close()
     global tbThread
     tb = TwitchBot(args[0], args[1], args[2], args[3])
     tbThread = BotThread(tb)
